@@ -1,25 +1,20 @@
-Here’s a clean setup for using ES Modules (Modern JavaScript) in a new Node.js project.
-
 # Create and enter project folder
 mkdir my-node-app
 cd my-node-app
 
-# Initialize package.json (with defaults)
+# Initialize package.json
 npm init -y
 
-# Edit package.json to use ES modules
+# Enable ES Modules
 npm pkg set type="module"
 
-# Install dependencies (example: Express)
+# Install Express
 npm install express
 
-# Install dev dependencies (example: nodemon for auto-restart)
+# Install nodemon
 npm install --save-dev nodemon
 
-# Create main entry file
-echo "const express = require('express'); const app = express(); const port = process.env.PORT || 3000; app.get('/', (req, res) => res.send('Hello World!')); app.listen(port, () => console.log(\`App running on port \${port}\`));" > server.js
-
-# Create main entry file (server.js) with ES module syntax
+# Create server.js
 @'
 import express from "express";
 
@@ -35,12 +30,9 @@ app.listen(port, () => {
 });
 '@ | Set-Content server.js
 
-
-
-# Add start scripts to package.json (manually or via command)
+# Add scripts
 npm pkg set scripts.start="node server.js"
 npm pkg set scripts.dev="nodemon server.js"
-
 
 # Run development server
 npm run dev
