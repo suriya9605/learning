@@ -1,3 +1,4 @@
+```bash
 # Create and enter project folder
 mkdir my-node-app
 cd my-node-app
