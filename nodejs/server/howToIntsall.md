@@ -32,8 +32,8 @@ app.listen(port, () => {
 '@ | Set-Content server.js
 
 # Add scripts
-npm pkg set scripts.start="node server.js"
-npm pkg set scripts.dev="nodemon server.js"
+npm pkg set scripts.start="node src/server.js"
+npm pkg set scripts.dev="nodemon src/server.js"
 
 # Run development server
 npm run dev
