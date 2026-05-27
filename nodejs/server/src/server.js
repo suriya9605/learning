@@ -47,3 +47,13 @@ process.on("unhandledRejection", (reason) => {
   console.error("Unhandled Rejection:", reason);
   process.exit(1);
 });
+
+process.on("exit", () => {
+  console.log("Process Ending...");
+});
+
+console.log("Platform:", process.platform);
+console.log("Platform:", process.version);
+console.log("Platform:", process.versions);
+console.log("Platform:", process.memoryUsage());
+
